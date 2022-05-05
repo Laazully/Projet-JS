@@ -12,7 +12,7 @@ body{
 
 /*------------- BOUTON RETOUR ET ROUND --------- */
 .top{
-    margin-top: -100px;
+    margin-top: -45px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,6 @@ button{
     font-family: 'bitcount-grid-double-square', 'sans-serif';
     color: #fff;
     background-color: #B92B2B;
-    margin-top: 20px;
     margin-left: 244px;
     padding: 5px 20px 5px 20px;
     border-radius: 5px;
@@ -73,13 +72,13 @@ h2{
 
 .bgBlock{ 
     display: flex;
-    align-items: flex-end;
     justify-content: center;
     height: 83vh;
     background-image: url(../img/ring.png);
     background-position: center center;
-    background-repeat: no-repeat;
-    margin-top: 27%;
+    background-size: cover;
+    margin-top: 15%;
+    margin-bottom : 15%;
     box-shadow: inset 0em 0em 2em 2em black;
 }
 
@@ -87,7 +86,7 @@ h2{
 .persentAndChoices{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     margin-bottom: 30px;
 }
 
@@ -100,3 +99,11 @@ h2{
 img{
     width: 80px;
 }
+
+/* ---------------FILTRE BLANC + GAGNE--------- */
+
+.win{
+    /* background-color: rgba(255, 255, 255, 0.684); */
+    background-color: red;
+}
+
