@@ -7,6 +7,7 @@
 body{
     font-family: 'bitcount-grid-double-square', 'sans-serif';
     color: #fff;
+    font-weight: 500;
     background-color: black 
 }
 
@@ -22,6 +23,7 @@ body{
 button{
     font-size: 20px;
     font-family: 'bitcount-grid-double-square', 'sans-serif';
+    font-weight: 500;
     color: #fff;
     background-color: #B92B2B;
     margin-left: 244px;
@@ -102,8 +104,28 @@ img{
 
 /* ---------------FILTRE BLANC + GAGNE--------- */
 
+.filter{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.247);
+    height: 100vh;
+    width: 100%;
+    color:#B92B2B;
+    font-family: 'bitcount-grid-double-square', 'sans-serif';
+    font-weight: 700;
+    font-size: 56px; 
+}
+
 .win{
-    /* background-color: rgba(255, 255, 255, 0.684); */
-    background-color: red;
+    display:none;
+}
+
+.loose{
+    display:none;
+}
+
+.equality{
+    display:none;
 }
 
