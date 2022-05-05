@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0
+}
+
+body{
+    background-color: black;
+    font-family: 'bitcount-grid-double-square', 'sans-serif';
+}
+
+.title{
+    border-radius: 25px;
+    height: 25px;
+    width:50px;
+    background-color: red;
+    opacity :82%;
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+}
