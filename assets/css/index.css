@@ -6,11 +6,24 @@
     padding: 0
 }
 
+/* BLOCS DISPLAY */
+.home{
+    display:none;
+}
+
+.battle{
+    display:none;
+}
+
+.resultGame{
+    display:block;
+}
+
+/* BLOC HOME */
 body{
     background-color: black;
 font-family: 'bitcount-grid-double-square', 'sans-serif';
 }
-
 
 .firstpart{
 display: flex;
@@ -30,6 +43,7 @@ justify-content:center;
     justify-content: center;
     position: absolute;
     font-size: 4vh;
+    color:#000000;
 }
 
 .picture{
