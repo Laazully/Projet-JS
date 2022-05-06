@@ -20,6 +20,12 @@ body{
     width: 100vw;
 }
 
+.return {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+
 a{
     font-size: 20px;
     font-family: 'bitcount-grid-double-square', 'sans-serif';
@@ -34,7 +40,8 @@ a{
 }
 
 h2{
-    margin-left: 20px; 
+    margin-left: 10%;
+    margin-bottom: 0.5rem; 
     font-size: 20px;
 }
 
@@ -156,7 +163,7 @@ img{
     /*------------------- BOUTON RETOUR ET ROUND ----------------- */
 
     a{
-        margin-left: 1200px;
+        margin-right: 62vw;
     }
 
     img{
