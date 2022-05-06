@@ -8,7 +8,7 @@
 
 /* BLOCS DISPLAY */
 .home{
-    display:none;
+    display:block;
 }
 
 .battle{
@@ -16,7 +16,7 @@
 }
 
 .resultGame{
-    display:block;
+    display:none;
 }
 
 /* BLOC HOME */
