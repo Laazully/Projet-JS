@@ -75,7 +75,12 @@ img{
     margin-top: 2rem;
 }
 
+.again{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
 
+/* BOUTON */
 #newGame{
     background: linear-gradient(#B92B2B, #5D1616);
     color: #fff;
@@ -83,9 +88,6 @@ img{
     border: solid 0px transparent;
     padding-left: 1rem;
     padding-right: 1rem;
-}
-
-.again{
-    font-size: 1.5rem;
-    margin-top: 2rem;
+    text-decoration: none;
+    text-align: center;
 }
