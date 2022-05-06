@@ -37,20 +37,19 @@ var ordiPierre = document.querySelector('.ordiPierre');
 var ordiFeuille = document.querySelector('.ordiFeuille');
 var ordiCiseaux = document.querySelector('.ordiCiseaux');
 
+//////////// SI JOUEUR CHOISI LA PIERRE /////////////////////
+
 btnPierre.addEventListener('click', function(){
-    // totoPierre.classList.add='show';
-    // if btnPierre('click')
 
     // Injecter l'image cliquée
     var divPlayerChoice = document.querySelector('.totoChoice');
     divPlayerChoice.innerHTML = btnPierre.outerHTML;
-
+    
     // Choisir de manière aléatoire le signe du computeur
-    var choices = document.querySelectorAll('.choices');
     var myChoices = ['pierre','feuille','ciseaux'];
     var rand = Math.random()*3 | 0;
     var rValue = myChoices[rand];
-
+    
     // Injecter l'image du signe du computeur
     // Déterminer le gagnant entre le signe player et le signe computer
     var divComputerChoice = document.querySelector('.compChoice')
@@ -70,18 +69,85 @@ btnPierre.addEventListener('click', function(){
         // Perdu
         resultLoose.style.display="flex";
     }
+})   
+////////////// SI JOUEUR CHOISI LA FEUILLE /////////////////////
+
+btnFeuille.addEventListener('click', function(){
     
-
-    // Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
+    // Injecter l'image cliquée
+    var divPlayerChoice = document.querySelector('.totoChoice');
+    divPlayerChoice.innerHTML = btnFeuille.outerHTML;
     
-
-
-    // Incrémenter le score du gagnant (computeur ou player)
-
-
-
-    // Injecter le résultat
+    // Choisir de manière aléatoire le signe du computeur
+    var myChoices = ['pierre','feuille','ciseaux'];
+    var rand = Math.random()*3 | 0;
+    var rValue = myChoices[rand];
+    
+    // Injecter l'image du signe du computeur
+    // Déterminer le gagnant entre le signe player et le signe computer
+    var divComputerChoice = document.querySelector('.compChoice')
+    var resultWin= document.querySelector('.win');
+    var resultLoose = document.querySelector('.loose');
+    var resultEquality = document.querySelector('.equality');
+    if(rValue === 'pierre') {
+        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
+        resultWin.style.display="flex";
+        // Gagné
+    } else if(rValue === 'ciseaux') {
+        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
+        resultEquality.style.display="flex";
+        // Perdu
+    } else { (rValue === 'feuille') 
+        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+        resultEquality.style.display="flex";
+        // Egalité
+    }
 })
+////////////// SI JOUEUR CHOISI LES CISEAUX /////////////////////
+
+btnCiseaux.addEventListener('click', function(){
+    
+    // Injecter l'image cliquée
+    var divPlayerChoice = document.querySelector('.totoChoice');
+    divPlayerChoice.innerHTML = btnCiseaux.outerHTML;
+    
+    // Choisir de manière aléatoire le signe du computeur
+    var myChoices = ['pierre','feuille','ciseaux'];
+    var rand = Math.random()*3 | 0;
+    var rValue = myChoices[rand];
+    
+    // Injecter l'image du signe du computeur
+    // Déterminer le gagnant entre le signe player et le signe computer
+    var divComputerChoice = document.querySelector('.compChoice')
+    var resultWin= document.querySelector('.win');
+    var resultLoose = document.querySelector('.loose');
+    var resultEquality = document.querySelector('.equality');
+    if(rValue === 'pierre') {
+        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
+        resultWin.style.display="flex";
+        // Gagné
+    } else if(rValue === 'ciseaux') {
+        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
+        resultEquality.style.display="flex";
+        // Egalité
+    } else { (rValue === 'feuille') 
+    divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+    resultLoose.style.display="flex";
+    // Perdu
+    }
+})  
+// Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
+    
+
+
+    
+// Incrémenter le score du gagnant (computeur ou player)
+
+
+
+    
+// Injecter le résultat
+
 
 
 

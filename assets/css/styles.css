@@ -182,9 +182,11 @@ img{
     justify-content: center;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.247);
-    height: 100vh;
-    width: 100%;
-    color:#B92B2B;
+    border-radius: 25px;
+    margin: 60vw 0vw 0vw 10vw;
+    height: 20vh;
+    width: 80%;
+    text-shadow: 3px 6px 9px black;
     font-family: 'bitcount-grid-double-square', 'sans-serif';
     font-weight: 700;
     font-size: 56px; 
@@ -192,15 +194,17 @@ img{
 
 .win{
     display:none;
-
+    color: goldenrod;
 }
 
 .loose{
     display:none;
+    color:#B92B2B;
 }
 
 .equality{
     display:none;
+    color: rgb(37, 37, 202);
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&& MODE WEB &&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
@@ -211,6 +215,11 @@ img{
 
     img{
         padding: 0px;
+    }
+
+    .filter{
+        margin: 12vw 0vw 0vw 10vw;
+        height: 50vh;
     }
 
     .action{
