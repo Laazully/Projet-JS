@@ -107,17 +107,56 @@ h2{
 }
 
 .totoChoice{
-    background-color: #5D1616;
     margin-right: 50px;
     height: 100px;
     width: 100px;
 }
+div>.totoPierre.show{
+    display: block;
+}
+
+.totoChoice.totoPierre.hide{
+    display:none;
+}
+
+
+.totoPierre{
+    display: none;
+    margin-right: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+.totoFeuille{
+    display: none;
+    margin-right: 50px;
+    height: 100px;
+    width: 100px;
+}
+.totoCiseaux{
+    display: none;
+    margin-right: 50px;
+    height: 100px;
+    width: 100px;
+} */
+
 .compChoice{
-    background-color: #e68b8b;
     margin-left: 50px;
     height: 100px;
     width: 100px;
 }
+
+.ordiPierre{
+    display: none;
+}
+
+.ordiFeuille{
+    display: none;
+}
+.ordiCiseaux{
+    display: none;
+}
+
 /* ------------------------------- % ET CHOIX --------------------------- */
 .persentAndChoices{
     display: flex;
@@ -182,12 +221,10 @@ img{
         width: 100%;
     }
     .totoChoice{
-        background-color: #5D1616;
         height: 200px;
         width: 200px;
     }
     .compChoice{
-        background-color: #e68b8b;
         height: 200px;
         width: 200px;
     }

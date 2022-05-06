@@ -28,7 +28,7 @@
                 <div>
                     <input class="input" type="text" placeholder="Exemple: King Kong">
                 </div>
-                <a href="Battle.html" type="button" class="btn-GO">GO</a>
+                <a type="button" class="btn-GO">GO</a>
             </div>
         </div>
     </div>
@@ -42,7 +42,8 @@
                 </div>
                 <h2> Round 1 </h2>
                 <div class="scores">
-                    <div class="toto"> toto
+                    <div class="toto">
+                        <div class="userName">User</div>
                         <div class="scoreToto"> 0 </div>
                     </div>
                     <div id="score">scores</div>
@@ -55,7 +56,11 @@
                 <div class="equality filter"></div>
                 <div class="action">
                     <div class="totoChoice"></div>
-                    <div class="compChoice"></div>
+                    <div class="compChoice">
+                        <img class='ordiPierre' src="/assets/img/pierre.png" alt="pierre">
+                        <img class='ordiFeuille' src="/assets/img/feuille.png" alt="feuille">
+                        <img class='ordiCiseaux' src="/assets/img/ciseaux.png" alt="ciseaux">
+                    </div>
                 </div>
                 
             </div>
@@ -64,10 +69,10 @@
                 <div class="persent"> 
                     <p> taux de victoires <span></span> % </p>
                 </div>
-                <div class="choices">
-                    <img src="/assets/img/pierre.png" alt="pierre">
-                    <img src="/assets/img/feuille.png" alt="feuille">
-                    <img src="/assets/img/ciseaux.png" alt="ciseaux">
+                <div class="AllChoices">
+                    <img class='pierre choices' src="/assets/img/pierre.png" alt="pierre">
+                    <img class='feuille choices' src="/assets/img/feuille.png" alt="feuille">
+                    <img class='ciseaux choices' src="/assets/img/ciseaux.png" alt="ciseaux">
                 </div>
             </div>
         </div>   
@@ -101,15 +106,13 @@
                     </div>
     <!-- BOUTON -->
                     <div class="col d-flex justify-content-center mt-4 ">
-                        <button id="newGame" href="Battle.html" type="button" >NOUVELLE <br> PARTIE</button>
+                        <button id="newGame" type="button" >NOUVELLE <br> PARTIE</button>
                     </div>
     
                 </div>
             </div>
         </div>
     </div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/boot strap@5.0.2/dist/js/bootstrap.bundle. min.js" integrity="sha384- MrcW6ZMFYlzcLA8Nl+NtUVF0sA7Ms XsP1UyJoMp4YLEuNSfAP+JcXn/tWtIa xVXM" crossorigin="anonymous"></script>
 </body>
 </html>
