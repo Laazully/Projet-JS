@@ -40,6 +40,8 @@ justify-content:center;
     background-position: center center;
     display: flex;
     justify-content: center;
+    box-shadow: inset 0em 0em 2em 2em black;
+
 }
 
 .signin{
@@ -68,7 +70,7 @@ justify-content:center;
 }
 
 .btn-GO{
-    background: linear-gradient(#B92B2B ,#B92B2B , #000000 );
+    background: linear-gradient(#B92B2B, #5D1616);
     width: 6em;
     height:6vh;
     border-radius:5px;
@@ -119,7 +121,6 @@ justify-content:center;
     width: 7em;
     height: 8vh;
     font-size: 25px;
-    background: linear-gradient(#B92B2B ,#B92B2B , #B92B2B,#000000 );
-
+    background: linear-gradient(#B92B2B, #5D1616);
 }
 }
