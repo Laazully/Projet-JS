@@ -8,7 +8,7 @@
 
 /* BLOCS DISPLAY */
 .home{
-    display:none;
+    display:block;
 }
 
 .battle{
@@ -16,7 +16,7 @@
 }
 
 .resultGame{
-    display:block;
+    display:none;
 }
 
 /* BLOC HOME */
@@ -42,8 +42,12 @@ justify-content:center;
     text-align: center;
     justify-content: center;
     position: absolute;
-    font-size: 4vh;
+    margin-top:80px;
     color:#000000;
+}
+
+h1{
+    font-size: 7vh;
 }
 
 .picture{
@@ -145,4 +149,9 @@ justify-content:center;
     font-size: 25px;
     background: linear-gradient(#B92B2B, #5D1616);
 }
+
+h1{
+    font-size: 10vh;
+}
+
 }
