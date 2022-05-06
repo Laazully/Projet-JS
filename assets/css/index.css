@@ -34,12 +34,14 @@ justify-content:center;
 
 .picture{
     height: 70vh;
-    margin-top: 27%;
+    margin-top: 15vh;
     background-image: url(../img/ring.png);
     background-size: cover;
     background-position: center center;
     display: flex;
     justify-content: center;
+    box-shadow: inset 0em 0em 2em 2em black;
+
 }
 
 .signin{
@@ -68,8 +70,7 @@ justify-content:center;
 }
 
 .btn-GO{
-    background-color:#B92B2B;
-    background: linear-gradient(#B92B2B ,#B92B2B , #000000 );
+    background: linear-gradient(#B92B2B, #5D1616);
     width: 6em;
     height:6vh;
     border-radius:5px;
@@ -83,11 +84,43 @@ justify-content:center;
 }
 
 
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 768px){
 
+.title{
+    height: 69px;
+    width: 442px;
+    margin-top: 210px;
 
+}
 
+.firstpart{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-
+.picture{
+    background-image: url(../img/ring.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height:100vh;
+    margin-top:0px;
+}
     
+.input{
+    width: 26em;
+    height: 3em;
+}
+
+.signin>p{
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+.btn-GO{
+    width: 7em;
+    height: 8vh;
+    font-size: 25px;
+    background: linear-gradient(#B92B2B, #5D1616);
+}
 }
