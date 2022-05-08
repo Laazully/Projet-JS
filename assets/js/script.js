@@ -68,8 +68,15 @@ btnPierre.addEventListener('click', function(){
         divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
         // Perdu
         resultLoose.style.display="flex";
-    }
-})   
+        
+    }    
+    // Incrémenter le score du gagnant (computeur ou player)
+    
+    
+    
+        
+    // Injecter le résultat
+})       
 ////////////// SI JOUEUR CHOISI LA FEUILLE /////////////////////
 
 btnFeuille.addEventListener('click', function(){
@@ -97,12 +104,12 @@ btnFeuille.addEventListener('click', function(){
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
         resultEquality.style.display="flex";
         // Perdu
-    } else { (rValue === 'feuille') 
+    } else { (rValue === 'feuille')     
         divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
         resultEquality.style.display="flex";
         // Egalité
-    }
-})
+    }    
+})    
 ////////////// SI JOUEUR CHOISI LES CISEAUX /////////////////////
 
 btnCiseaux.addEventListener('click', function(){
@@ -130,12 +137,12 @@ btnCiseaux.addEventListener('click', function(){
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
         resultEquality.style.display="flex";
         // Egalité
-    } else { (rValue === 'feuille') 
+    } else { (rValue === 'feuille')     
     divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
     resultLoose.style.display="flex";
     // Perdu
     }
-})  
+})      
 // Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
     
 // var score = 
@@ -143,18 +150,11 @@ btnCiseaux.addEventListener('click', function(){
 //     divScoreComp=document.querySelector('.scoreComp')
 // if(score===win){
 
-// }
+// }    
 
 
 
     
-// Incrémenter le score du gagnant (computeur ou player)
-
-
-
-    
-// Injecter le résultat
-
 
 
 

@@ -36,7 +36,7 @@ button{
     font-family: 'bitcount-grid-double-square', 'sans-serif';
     font-weight: 500;
     color: #fff;
-    background: linear-gradient(#B92B2B, #5D1616);;
+    background: linear-gradient(#B92B2B, #5D1616);
     margin-left: 244px;
     padding: 5px 20px 5px 20px;
     border-radius: 5px;
@@ -111,14 +111,6 @@ h2{
     height: 100px;
     width: 100px;
 }
-div>.totoPierre.show{
-    display: block;
-}
-
-.totoChoice.totoPierre.hide{
-    display:none;
-}
-
 
 .totoPierre{
     display: none;
@@ -138,7 +130,7 @@ div>.totoPierre.show{
     margin-right: 50px;
     height: 100px;
     width: 100px;
-} */
+} 
 
 .compChoice{
     margin-left: 50px;
