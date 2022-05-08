@@ -206,7 +206,7 @@ img{
     /*------------------- BOUTON RETOUR ET ROUND ----------------- */
 
     img{
-        padding: 0px;
+        width: 100px;
     }
 
     .filter{
@@ -229,5 +229,20 @@ img{
         height: 200px;
         width: 200px;
     }
+    .win{
+        display:none;
+        color: goldenrod;
+    }
+    
+    .loose{
+        display:none;
+        color:#B92B2B;
+    }
+    
+    .equality{
+        display:none;
+        color: rgb(37, 37, 202);
+    }
+    
     
 }

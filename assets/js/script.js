@@ -144,17 +144,24 @@ btnCiseaux.addEventListener('click', function(){
         divComputerChoice.innerHTML = 'pierre';
         // Perdu
     resultLoose.style.display="flex";
+    
+
+    
         // Injecte  et incrémente score + 1 quand user gagne
         divScoreToto.innerHTML = scoreToto += 1;
     } else if(rValue === 'ciseaux') {
         divComputerChoice.innerHTML = 'ciseaux';
         // Egalité
         resultEquality.style.display="flex";
+        
 
     } else { (rValue === 'feuille')     
     divComputerChoice.innerHTML ='feuille';
     // Gagné
     resultWin.style.display="flex";
+    
+    
+
     
     // Injecte et incrémente score + 1 quand computer gagne
     divScoreComp.innerHTML = scoreComp += 1;
@@ -164,18 +171,18 @@ btnCiseaux.addEventListener('click', function(){
 
 
 // définir variable résultat score actuel sinon ne grimpe jamais
-// var actualScoretoto = scoreToto;
-// console.log(actualScoretoto)
-// var actualScoreComp = scoreComp;
+var actualScoretoto = scoreToto;
+var actualScoreComp = scoreComp;
+console.log(scoreComp)
 // pour injecter et incrémenter les rounds (1 round= 3 victoires)
 
 // var round = document.querySelector('.roundTour')
 // var roundScore = 1;
 
 // if (scoreComp >= 3){
-//     round.innerHTML = roundScore++;
+//     round.innerHTML = roundScore ++;
 // } else {(scoreToto>= 3)
-//     round.innerHTML = roundScore++;
+//     round.innerHTML = roundScore ++;
 // }
 
 
