@@ -36,7 +36,12 @@ var totoCiseaux = document.querySelector('.totoCiseaux');
 var ordiPierre = document.querySelector('.ordiPierre');
 var ordiFeuille = document.querySelector('.ordiFeuille');
 var ordiCiseaux = document.querySelector('.ordiCiseaux');
-
+var divScoreToto = document.querySelector('.scoreToto')
+var divScoreComp = document.querySelector('.scoreComp');
+var scoreToto = 0;
+var scoreComp = 0;
+divScoreToto.innerHTML = scoreToto;
+divScoreComp.innerHTML = scoreComp;
 //////////// SI JOUEUR CHOISI LA PIERRE /////////////////////
 
 btnPierre.addEventListener('click', function(){
@@ -56,19 +61,24 @@ btnPierre.addEventListener('click', function(){
     var resultWin= document.querySelector('.win');
     var resultLoose = document.querySelector('.loose');
     var resultEquality = document.querySelector('.equality');
+    
     if(rValue === 'pierre') {
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
         // Egalité
         resultEquality.style.display="flex";
+
     } else if(rValue === 'ciseaux') {
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
         // Gagné
         resultWin.style.display="flex";
+        divScoreToto.innerHTML = scoreToto++;
+        
+
     } else { (rValue === 'feuille') 
         divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
         // Perdu
         resultLoose.style.display="flex";
-        
+        divScoreComp.innerHTML = scoreComp++;
     }    
     // Incrémenter le score du gagnant (computeur ou player)
     
@@ -98,16 +108,18 @@ btnFeuille.addEventListener('click', function(){
     var resultEquality = document.querySelector('.equality');
     if(rValue === 'pierre') {
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
-        resultWin.style.display="flex";
         // Gagné
+        resultWin.style.display="flex";
+
     } else if(rValue === 'ciseaux') {
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
-        resultEquality.style.display="flex";
         // Perdu
+        resultEquality.style.display="flex";
+
     } else { (rValue === 'feuille')     
         divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
-        resultEquality.style.display="flex";
         // Egalité
+        resultEquality.style.display="flex";
     }    
 })    
 ////////////// SI JOUEUR CHOISI LES CISEAUX /////////////////////
@@ -131,16 +143,18 @@ btnCiseaux.addEventListener('click', function(){
     var resultEquality = document.querySelector('.equality');
     if(rValue === 'pierre') {
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
-        resultWin.style.display="flex";
         // Gagné
+        resultWin.style.display="flex";
+
     } else if(rValue === 'ciseaux') {
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
-        resultEquality.style.display="flex";
         // Egalité
+        resultEquality.style.display="flex";
+
     } else { (rValue === 'feuille')     
     divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
-    resultLoose.style.display="flex";
     // Perdu
+    resultLoose.style.display="flex";
     }
 })      
 // Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
