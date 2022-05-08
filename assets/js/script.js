@@ -63,24 +63,24 @@ btnPierre.addEventListener('click', function(){
     var resultEquality = document.querySelector('.equality');
     
     if(rValue === 'pierre') {
-        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
+        divComputerChoice.innerHTML = 'pierre';
         // Egalité
         resultEquality.style.display="flex";
 
     } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
+        divComputerChoice.innerHTML = 'ciseaux';
         // Gagné
         resultWin.style.display="flex";
         // Injecte et incrémente score + 1 quand user gagne
-        divScoreToto.innerHTML = scoreToto++;
+        divScoreToto.innerHTML = scoreToto += 1;
         
 
     } else { (rValue === 'feuille') 
-        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+        divComputerChoice.innerHTML ='feuille';
         // Perdu
         resultLoose.style.display="flex";
         // Injecte  et incrémente score + 1 quand computer gagne
-        divScoreComp.innerHTML = scoreComp++;
+        divScoreComp.innerHTML = scoreComp += 1;
     }    
 
 })       
@@ -104,19 +104,19 @@ btnFeuille.addEventListener('click', function(){
     var resultLoose = document.querySelector('.loose');
     var resultEquality = document.querySelector('.equality');
     if(rValue === 'pierre') {
-        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
+        divComputerChoice.innerHTML = 'pierre';
         // Gagné
         resultWin.style.display="flex";
         // Injecte et incrémente score + 1 quand user gagne
-        divScoreToto.innerHTML = scoreToto++;
+        divScoreToto.innerHTML = scoreToto += 1;
     } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
+        divComputerChoice.innerHTML = 'ciseaux';
         // Perdu
-        resultEquality.style.display="flex";
+        resultLoose.style.display="flex";
         // Injecte et incrémente computer + 1 quand user gagne
-        divScoreComp.innerHTML = scoreComp++;
+        divScoreComp.innerHTML = scoreComp += 1;
     } else { (rValue === 'feuille')     
-        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+        divComputerChoice.innerHTML ='feuille';
         // Egalité
         resultEquality.style.display="flex";
     }    
@@ -131,7 +131,7 @@ btnCiseaux.addEventListener('click', function(){
     
     // Choisir de manière aléatoire le signe du computeur
     var myChoices = ['pierre','feuille','ciseaux'];
-    var rand = Math.random()*3 | 0;
+    var rand = Math.random()*3;
     var rValue = myChoices[rand];
     
     // Injecter l'image du signe du computeur
@@ -141,29 +141,32 @@ btnCiseaux.addEventListener('click', function(){
     var resultLoose = document.querySelector('.loose');
     var resultEquality = document.querySelector('.equality');
     if(rValue === 'pierre') {
-        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
-        // Gagné
-        resultWin.style.display="flex";
+        divComputerChoice.innerHTML = 'pierre';
+        // Perdu
+    resultLoose.style.display="flex";
         // Injecte  et incrémente score + 1 quand user gagne
-        divScoreToto.innerHTML = scoreToto++;
+        divScoreToto.innerHTML = scoreToto += 1;
     } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
+        divComputerChoice.innerHTML = 'ciseaux';
         // Egalité
         resultEquality.style.display="flex";
 
     } else { (rValue === 'feuille')     
-    divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
-    // Perdu
-    resultLoose.style.display="flex";
+    divComputerChoice.innerHTML ='feuille';
+    // Gagné
+    resultWin.style.display="flex";
+    
     // Injecte et incrémente score + 1 quand computer gagne
-    divScoreComp.innerHTML = scoreComp++;
+    divScoreComp.innerHTML = scoreComp += 1;
     }
 })      
 
+
+
 // définir variable résultat score actuel sinon ne grimpe jamais
-var actualScoretoto = scoreToto;
-console.log(actualScoretoto)
-var actualScoreComp = scoreComp;
+// var actualScoretoto = scoreToto;
+// console.log(actualScoretoto)
+// var actualScoreComp = scoreComp;
 // pour injecter et incrémenter les rounds (1 round= 3 victoires)
 
 // var round = document.querySelector('.roundTour')
