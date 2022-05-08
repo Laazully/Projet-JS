@@ -138,6 +138,13 @@ btnCiseaux.addEventListener('click', function(){
 })  
 // Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
     
+// var score = 
+//     divScoreToto= document.querySelector('.scoreToto')
+//     divScoreComp=document.querySelector('.scoreComp')
+// if(score===win){
+
+// }
+
 
 
     
