@@ -71,6 +71,7 @@ btnPierre.addEventListener('click', function(){
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
         // Gagné
         resultWin.style.display="flex";
+        // Injecte et incrémente score + 1 quand user gagne
         divScoreToto.innerHTML = scoreToto++;
         
 
@@ -78,14 +79,10 @@ btnPierre.addEventListener('click', function(){
         divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
         // Perdu
         resultLoose.style.display="flex";
+        // Injecte  et incrémente score + 1 quand computer gagne
         divScoreComp.innerHTML = scoreComp++;
     }    
-    // Incrémenter le score du gagnant (computeur ou player)
-    
-    
-    
-        
-    // Injecter le résultat
+
 })       
 ////////////// SI JOUEUR CHOISI LA FEUILLE /////////////////////
 
@@ -110,12 +107,14 @@ btnFeuille.addEventListener('click', function(){
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
         // Gagné
         resultWin.style.display="flex";
-
+        // Injecte et incrémente score + 1 quand user gagne
+        divScoreToto.innerHTML = scoreToto++;
     } else if(rValue === 'ciseaux') {
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
         // Perdu
         resultEquality.style.display="flex";
-
+        // Injecte et incrémente computer + 1 quand user gagne
+        divScoreComp.innerHTML = scoreComp++;
     } else { (rValue === 'feuille')     
         divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
         // Egalité
@@ -145,7 +144,8 @@ btnCiseaux.addEventListener('click', function(){
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
         // Gagné
         resultWin.style.display="flex";
-
+        // Injecte  et incrémente score + 1 quand user gagne
+        divScoreToto.innerHTML = scoreToto++;
     } else if(rValue === 'ciseaux') {
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
         // Egalité
@@ -155,20 +155,33 @@ btnCiseaux.addEventListener('click', function(){
     divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
     // Perdu
     resultLoose.style.display="flex";
+    // Injecte et incrémente score + 1 quand computer gagne
+    divScoreComp.innerHTML = scoreComp++;
     }
 })      
-// Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
-    
-// var score = 
-//     divScoreToto= document.querySelector('.scoreToto')
-//     divScoreComp=document.querySelector('.scoreComp')
-// if(score===win){
 
-// }    
+// définir variable résultat score actuel sinon ne grimpe jamais
+var actualScoretoto = scoreToto;
+console.log(actualScoretoto)
+var actualScoreComp = scoreComp;
+// pour injecter et incrémenter les rounds (1 round= 3 victoires)
+
+// var round = document.querySelector('.roundTour')
+// var roundScore = 1;
+
+// if (scoreComp >= 3){
+//     round.innerHTML = roundScore++;
+// } else {(scoreToto>= 3)
+//     round.innerHTML = roundScore++;
+// }
 
 
+// SI ROUND = 5
 
-    
+// calculer les taux de victoire
+// afficher les taux de victoire
+
+// définir le gagant si taux victoire >= à 51%
 
 
 
