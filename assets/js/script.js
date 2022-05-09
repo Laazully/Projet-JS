@@ -46,24 +46,24 @@ var getUserScore = document.querySelector('.scoreUser')
 var getComputerScore = document.querySelector('.scoreComp')
 
 btnPierre.addEventListener('click', function(){
+    console.log('click stone');
     // Injecter l'image cliquée
     divPlayerChoice.innerHTML = btnPierre.outerHTML;
-    
+
     // Choisir de manière aléatoire le signe du computeur
+    var choices = document.querySelectorAll('.choices');
     var myChoices = ['pierre','feuille','ciseaux'];
     var rand = Math.random()*3 | 0;
     var rValue = myChoices[rand];
-    
+
     // Injecter l'image du signe du computeur
     // Déterminer le gagnant entre le signe player et le signe computer
-    var divComputerChoice = document.querySelector('.compChoice')
-    var resultWin= document.querySelector('.win');
-    var resultLoose = document.querySelector('.loose');
-    var resultEquality = document.querySelector('.equality');
-    
+    // **Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
+
     if(rValue === 'pierre') {
+        // Afficher et enlever les mains
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
-        // Egalité
+        //** */ Egalité
         setTimeout(function() {
             resultEquality.style.display="flex";
             setTimeout(function(){
@@ -72,11 +72,12 @@ btnPierre.addEventListener('click', function(){
                 divPlayerChoice.innerHTML = '';
             },1000)
         },500);
-            // Score +0
-            
+        // Score +0
+        
     } else if(rValue === 'ciseaux') {
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
-        // Gagné
+        //** */ Gagné
+        // resultWin.style.display="flex";
         setTimeout(function() {
             resultWin.style.display="flex";
             setTimeout(function(){
@@ -89,10 +90,10 @@ btnPierre.addEventListener('click', function(){
         userScore ++; // Incrémenter le score du gagnant (computeur ou player)
         getUserScore.innerHTML = userScore; // Injecter le résultat
         winRate(userScore, computerScore);
-
-    } else { (rValue === 'feuille') 
-    divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
-        // Perdu
+    } else { //feuille
+        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+        //** */ Perdu
+        // resultLoose.style.display="flex";
         setTimeout(function() {
             resultLoose.style.display="flex";
             setTimeout(function(){
@@ -105,10 +106,10 @@ btnPierre.addEventListener('click', function(){
         computerScore++;
         getComputerScore.innerHTML = computerScore;
         winRate(userScore, computerScore);
-    }    
 
-})       
-////////////// SI JOUEUR CHOISI LA FEUILLE /////////////////////
+    }
+})
+
 
 btnFeuille.addEventListener('click', function(){
     // Injecter l'image cliquée
@@ -123,6 +124,7 @@ btnFeuille.addEventListener('click', function(){
     // Injecter l'image du signe du computeur
     // Déterminer le gagnant entre le signe player et le signe computer
     // **Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
+
 
     if(rValue === 'pierre') {
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
@@ -244,6 +246,8 @@ function winRate (getUserScore, getComputerScore){
     round();
 }
 
+
+
 // Au bout de 3 victoires, le round est terminé, le n° round change 
 //et score remis à zéro
 var getRoundNumber = document.querySelector('.round');
@@ -252,6 +256,8 @@ var scoreUserInit = 0;
 var scoreCompInit = 0;
 var winRateInit = 0;
 var audio=document.querySelector('#bell');
+
+
 
 function round (){
     if (userScore ==3 || computerScore==3){
@@ -283,6 +289,8 @@ function round (){
 
 
 // Au bout de 5 round, la partie est terminé et renvoie vers resultat partie
+//Ca bug !
+// OUI
 // function resultGame (){
 //     if (round ==5){
 //         divBattle.style.display = 'none';
