@@ -5,6 +5,7 @@ var divResult = document.querySelector('.resultGame');
 var getPseudo = document.querySelector('.input')
 var pseudo = document.querySelector('.userName');
 
+
 //////// PAGE 1 BUTTON GO ET PSEUDO   ///////////////////
 
 btnGo.addEventListener('click', function(){
@@ -30,10 +31,11 @@ btnReturn.addEventListener('click', function(){
 //////// PAGE 2 CHOIX DES ARMES  ///////////////////
 
 var btnPierre = document.querySelector('.pierre');
+console.log(btnPierre);
 var btnFeuille = document.querySelector('.feuille');
 var btnCiseaux = document.querySelector('.ciseaux');
 
-
+var divPlayerChoice = document.querySelector('.userChoice');
 var divComputerChoice = document.querySelector('.compChoice')
 var resultWin= document.querySelector('.win');
 var resultLoose = document.querySelector('.loose');
@@ -44,64 +46,21 @@ var getUserScore = document.querySelector('.scoreUser')
 var getComputerScore = document.querySelector('.scoreComp')
 
 btnPierre.addEventListener('click', function(){
-
+    console.log('click stone');
     // Injecter l'image cliquée
-    var divPlayerChoice = document.querySelector('.userChoice');
     divPlayerChoice.innerHTML = btnPierre.outerHTML;
-    
+
     // Choisir de manière aléatoire le signe du computeur
+    var choices = document.querySelectorAll('.choices');
     var myChoices = ['pierre','feuille','ciseaux'];
     var rand = Math.random()*3 | 0;
     var rValue = myChoices[rand];
-    
-    // Injecter l'image du signe du computeur
-    // Déterminer le gagnant entre le signe player et le signe computer
-    var divComputerChoice = document.querySelector('.compChoice')
-    var resultWin= document.querySelector('.win');
-    var resultLoose = document.querySelector('.loose');
-    var resultEquality = document.querySelector('.equality');
-    
-    if(rValue === 'pierre') {
-        divComputerChoice.innerHTML = 'pierre';
-        // Egalité
-        resultEquality.style.display="flex";
 
-    } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = 'ciseaux';
-        // Gagné
-        resultWin.style.display="flex";
-        // Injecte et incrémente score + 1 quand user gagne
-        divScoreToto.innerHTML = scoreToto += 1;
-        
-
-    } else { (rValue === 'feuille') 
-        divComputerChoice.innerHTML ='feuille';
-        // Perdu
-        resultLoose.style.display="flex";
-        // Injecte  et incrémente score + 1 quand computer gagne
-        divScoreComp.innerHTML = scoreComp += 1;
-    }    
-
-})       
-////////////// SI JOUEUR CHOISI LA FEUILLE /////////////////////
-
-btnFeuille.addEventListener('click', function(){
-    
-    // Injecter l'image cliquée
-    var divPlayerChoice = document.querySelector('.totoChoice');
-    divPlayerChoice.innerHTML = btnFeuille.outerHTML;
-    
-    // Choisir de manière aléatoire le signe du computeur
-    var myChoices = ['pierre','feuille','ciseaux'];
-    var rand = Math.random()*3 | 0;
-    var rValue = myChoices[rand];
-    
     // Injecter l'image du signe du computeur
     // Déterminer le gagnant entre le signe player et le signe computer
     // **Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
 
     if(rValue === 'pierre') {
-
         // Afficher et enlever les mains
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
         //** */ Egalité
@@ -152,10 +111,8 @@ btnFeuille.addEventListener('click', function(){
 })
 
 
-
 btnFeuille.addEventListener('click', function(){
     // Injecter l'image cliquée
-    var divPlayerChoice = document.querySelector('.userChoice');
     divPlayerChoice.innerHTML = btnFeuille.outerHTML;
 
     // Choisir de manière aléatoire le signe du computeur
@@ -217,7 +174,6 @@ btnFeuille.addEventListener('click', function(){
 
 btnCiseaux.addEventListener('click', function(){
     // Injecter l'image cliquée
-    var divPlayerChoice = document.querySelector('.userChoice');
     divPlayerChoice.innerHTML = btnCiseaux.outerHTML;
 
     // Choisir de manière aléatoire le signe du computeur
@@ -238,6 +194,8 @@ btnCiseaux.addEventListener('click', function(){
             resultLoose.style.display="flex";
             setTimeout(function(){
                 resultLoose.style.display="none";
+                divComputerChoice.innerHTML = '';
+                divPlayerChoice.innerHTML = '';
             },1000)
         },500);
         // Score +0
@@ -253,6 +211,8 @@ btnCiseaux.addEventListener('click', function(){
             resultEquality.style.display="flex";
             setTimeout(function(){
                 resultEquality.style.display="none";
+                divComputerChoice.innerHTML = '';
+                divPlayerChoice.innerHTML = '';
             },1000)
         },500);
             // Score +0
@@ -264,6 +224,8 @@ btnCiseaux.addEventListener('click', function(){
             resultWin.style.display="flex";
             setTimeout(function(){
                 resultWin.style.display="none";
+                divComputerChoice.innerHTML = '';
+                divPlayerChoice.innerHTML = '';
             },1000)
         },500);
         // Score +1
@@ -327,7 +289,8 @@ function round (){
 
 
 // Au bout de 5 round, la partie est terminé et renvoie vers resultat partie
-
+//Ca bug !
+// OUI
 // function resultGame (){
 //     if (round ==5){
 //         divBattle.style.display = 'none';
