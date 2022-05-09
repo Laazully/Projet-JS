@@ -282,7 +282,7 @@ function round (){
 
 
 // Au bout de 5 round, la partie est terminé et renvoie vers resultat partie
-
+//Ca bug
 // function resultGame (){
 //     if (round ==5){
 //         divBattle.style.display = 'none';
