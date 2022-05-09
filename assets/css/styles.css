@@ -111,34 +111,7 @@ h2{
     height: 100px;
     width: 100px;
 }
-/* div>.totoPierre.show{
-    display: block;
-}
 
-.totoChoice.totoPierre.hide{
-    display:none;
-} */
-
-
-/* .totoPierre{
-    display: none;
-    margin-right: 50px;
-    height: 100px;
-    width: 100px;
-}
-
-.totoFeuille{
-    display: none;
-    margin-right: 50px;
-    height: 100px;
-    width: 100px;
-}
-.totoCiseaux{
-    display: none;
-    margin-right: 50px;
-    height: 100px;
-    width: 100px;
-} */ */
 
 .compChoice{
     margin-left: 50px;
@@ -228,10 +201,12 @@ img{
     .userChoice{
         height: 200px;
         width: 200px;
+
     }
     .compChoice{
         height: 200px;
         width: 200px;
+
     }
     
     .filter{

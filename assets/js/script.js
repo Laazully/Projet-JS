@@ -5,6 +5,7 @@ var divResult = document.querySelector('.resultGame');
 var getPseudo = document.querySelector('.input')
 var pseudo = document.querySelector('.userName');
 
+
 //////// PAGE 1 BUTTON GO ET PSEUDO   ///////////////////
 
 btnGo.addEventListener('click', function(){
@@ -30,9 +31,11 @@ btnReturn.addEventListener('click', function(){
 //////// PAGE 2 CHOIX DES ARMES  ///////////////////
 
 var btnPierre = document.querySelector('.pierre');
+console.log(btnPierre);
 var btnFeuille = document.querySelector('.feuille');
 var btnCiseaux = document.querySelector('.ciseaux');
 
+var divPlayerChoice = document.querySelector('.userChoice');
 var divComputerChoice = document.querySelector('.compChoice')
 var resultWin= document.querySelector('.win');
 var resultLoose = document.querySelector('.loose');
@@ -43,8 +46,8 @@ var getUserScore = document.querySelector('.scoreUser')
 var getComputerScore = document.querySelector('.scoreComp')
 
 btnPierre.addEventListener('click', function(){
+    console.log('click stone');
     // Injecter l'image cliquée
-    var divPlayerChoice = document.querySelector('.userChoice');
     divPlayerChoice.innerHTML = btnPierre.outerHTML;
 
     // Choisir de manière aléatoire le signe du computeur
@@ -110,7 +113,6 @@ btnPierre.addEventListener('click', function(){
 
 btnFeuille.addEventListener('click', function(){
     // Injecter l'image cliquée
-    var divPlayerChoice = document.querySelector('.userChoice');
     divPlayerChoice.innerHTML = btnFeuille.outerHTML;
 
     // Choisir de manière aléatoire le signe du computeur
@@ -172,7 +174,6 @@ btnFeuille.addEventListener('click', function(){
 
 btnCiseaux.addEventListener('click', function(){
     // Injecter l'image cliquée
-    var divPlayerChoice = document.querySelector('.userChoice');
     divPlayerChoice.innerHTML = btnCiseaux.outerHTML;
 
     // Choisir de manière aléatoire le signe du computeur
@@ -193,6 +194,8 @@ btnCiseaux.addEventListener('click', function(){
             resultLoose.style.display="flex";
             setTimeout(function(){
                 resultLoose.style.display="none";
+                divComputerChoice.innerHTML = '';
+                divPlayerChoice.innerHTML = '';
             },1000)
         },500);
         // Score +0
@@ -208,6 +211,8 @@ btnCiseaux.addEventListener('click', function(){
             resultEquality.style.display="flex";
             setTimeout(function(){
                 resultEquality.style.display="none";
+                divComputerChoice.innerHTML = '';
+                divPlayerChoice.innerHTML = '';
             },1000)
         },500);
             // Score +0
@@ -219,6 +224,8 @@ btnCiseaux.addEventListener('click', function(){
             resultWin.style.display="flex";
             setTimeout(function(){
                 resultWin.style.display="none";
+                divComputerChoice.innerHTML = '';
+                divPlayerChoice.innerHTML = '';
             },1000)
         },500);
         // Score +1
