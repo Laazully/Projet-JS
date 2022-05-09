@@ -36,7 +36,7 @@ button{
     font-family: 'bitcount-grid-double-square', 'sans-serif';
     font-weight: 500;
     color: #fff;
-    background: linear-gradient(#B92B2B, #5D1616);;
+    background: linear-gradient(#B92B2B, #5D1616);
     margin-left: 244px;
     padding: 5px 20px 5px 20px;
     border-radius: 5px;
@@ -120,6 +120,7 @@ h2{
 } */
 
 
+
 /* .totoPierre{
     display: none;
     margin-right: 50px;
@@ -138,7 +139,9 @@ h2{
     margin-right: 50px;
     height: 100px;
     width: 100px;
-} */ */
+
+} */ 
+
 
 .compChoice{
     margin-left: 50px;
@@ -196,6 +199,7 @@ img{
 .win{
     display:none;
     color:#FBC737;
+
 }
 
 .loose{
@@ -206,6 +210,7 @@ img{
 .equality{
     display:none;
     color:#002B75;
+
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&& MODE WEB &&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
@@ -215,7 +220,12 @@ img{
     /*------------------- BOUTON RETOUR ET ROUND ----------------- */
 
     img{
-        padding: 0px;
+        width: 100px;
+    }
+
+    .filter{
+        margin: 12vw 0vw 0vw 10vw;
+        height: 50vh;
     }
 
     .action{
@@ -233,6 +243,21 @@ img{
         height: 200px;
         width: 200px;
     }
+    .win{
+        display:none;
+        color: goldenrod;
+    }
+    
+    .loose{
+        display:none;
+        color:#B92B2B;
+    }
+    
+    .equality{
+        display:none;
+        color: rgb(37, 37, 202);
+    }
+    
     
     .filter{
         margin: 12vw 0vw 0vw 10vw;

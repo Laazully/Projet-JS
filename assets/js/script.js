@@ -33,6 +33,7 @@ var btnPierre = document.querySelector('.pierre');
 var btnFeuille = document.querySelector('.feuille');
 var btnCiseaux = document.querySelector('.ciseaux');
 
+
 var divComputerChoice = document.querySelector('.compChoice')
 var resultWin= document.querySelector('.win');
 var resultLoose = document.querySelector('.loose');
@@ -43,21 +44,64 @@ var getUserScore = document.querySelector('.scoreUser')
 var getComputerScore = document.querySelector('.scoreComp')
 
 btnPierre.addEventListener('click', function(){
+
     // Injecter l'image cliquée
     var divPlayerChoice = document.querySelector('.userChoice');
     divPlayerChoice.innerHTML = btnPierre.outerHTML;
-
+    
     // Choisir de manière aléatoire le signe du computeur
-    var choices = document.querySelectorAll('.choices');
     var myChoices = ['pierre','feuille','ciseaux'];
     var rand = Math.random()*3 | 0;
     var rValue = myChoices[rand];
+    
+    // Injecter l'image du signe du computeur
+    // Déterminer le gagnant entre le signe player et le signe computer
+    var divComputerChoice = document.querySelector('.compChoice')
+    var resultWin= document.querySelector('.win');
+    var resultLoose = document.querySelector('.loose');
+    var resultEquality = document.querySelector('.equality');
+    
+    if(rValue === 'pierre') {
+        divComputerChoice.innerHTML = 'pierre';
+        // Egalité
+        resultEquality.style.display="flex";
 
+    } else if(rValue === 'ciseaux') {
+        divComputerChoice.innerHTML = 'ciseaux';
+        // Gagné
+        resultWin.style.display="flex";
+        // Injecte et incrémente score + 1 quand user gagne
+        divScoreToto.innerHTML = scoreToto += 1;
+        
+
+    } else { (rValue === 'feuille') 
+        divComputerChoice.innerHTML ='feuille';
+        // Perdu
+        resultLoose.style.display="flex";
+        // Injecte  et incrémente score + 1 quand computer gagne
+        divScoreComp.innerHTML = scoreComp += 1;
+    }    
+
+})       
+////////////// SI JOUEUR CHOISI LA FEUILLE /////////////////////
+
+btnFeuille.addEventListener('click', function(){
+    
+    // Injecter l'image cliquée
+    var divPlayerChoice = document.querySelector('.totoChoice');
+    divPlayerChoice.innerHTML = btnFeuille.outerHTML;
+    
+    // Choisir de manière aléatoire le signe du computeur
+    var myChoices = ['pierre','feuille','ciseaux'];
+    var rand = Math.random()*3 | 0;
+    var rValue = myChoices[rand];
+    
     // Injecter l'image du signe du computeur
     // Déterminer le gagnant entre le signe player et le signe computer
     // **Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
 
     if(rValue === 'pierre') {
+
         // Afficher et enlever les mains
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
         //** */ Egalité
@@ -106,6 +150,7 @@ btnPierre.addEventListener('click', function(){
 
     }
 })
+
 
 
 btnFeuille.addEventListener('click', function(){
