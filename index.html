@@ -40,32 +40,33 @@
                 <!-- bouton -->
                 <div class="return">
                     <button> Retour </button>
-                </div>
-                <h2> Round 1 </h2>
+                </div> 
+                
+                <!--Tableau score-->
+                <h2 class="round"> Round 1 </h2>
                 <div class="scores">
-                    <div class="toto">
-                        <div class="userName">User</div>
-                        <div class="scoreToto"> 0 </div>
+                    <div class="user">
+                        <div class="userName"></div>
+                        <div class="scoreUser">0</div>
                     </div>
                     <div id="score">scores</div>
                     <div class="computer"> Ordi
                         <div class="scoreComp"> 0 </div>
                     </div>
                 </div>
-                <div class="win filter"> Gagné !</div>
-                <div class="loose filter">Perdu</div>
-                <div class="equality filter">Egalité</div>
+                <!--Filtre-->
+                <div class="win filter"></div>
+                <div class="loose filter"></div>
+                <div class="equality filter"></div>
+
+                <!--User VS computer-->
                 <div class="action">
-                    <div class="totoChoice"></div>
-                    <div class="compChoice">
-                        <img class='ordiPierre' src="/assets/img/pierre.png" alt="pierre">
-                        <img class='ordiFeuille' src="/assets/img/feuille.png" alt="feuille">
-                        <img class='ordiCiseaux' src="/assets/img/ciseaux.png" alt="ciseaux">
-                    </div>
+                    <div class="userChoice"></div>
+                    <div class="compChoice"></div>
                 </div>
-                
             </div>
 
+            <!--Taux de victoire & Choix user bas d'écran-->
             <div class="persentAndChoices">
                 <div class="persent"> 
                     <p> taux de victoires <span></span> % </p>
