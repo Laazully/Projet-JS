@@ -213,7 +213,7 @@ function round (){
         // Remettre le taux de victoire à zéro:
         getpourcent = winRateInit;
         //afficher le nouveau taux de victoire :
-        pourcent.innerHTML=getpourcent;
+        pourcent.innerHTML=getpourcent + '%';
     } 
 }
 
