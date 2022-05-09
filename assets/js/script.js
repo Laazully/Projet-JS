@@ -48,13 +48,14 @@ btnPierre.addEventListener('click', function(){
     divPlayerChoice.innerHTML = btnPierre.outerHTML;
 
     // Choisir de manière aléatoire le signe du computeur
-    var choices = document.querySelectorAll('.choices');
-    var myChoices = ['pierre','feuille','ciseaux'];
-    var rand = Math.random()*3 | 0;
-    var rValue = myChoices[rand];
+    // var choices = document.querySelectorAll('.choices');
+    // var myChoices = ['pierre','feuille','ciseaux'];
+    // var rand = Math.random()*3 | 0;
+    // var rValue = myChoices[rand];
 
     // Injecter l'image du signe du computeur
     // Déterminer le gagnant entre le signe player et le signe computer
+<<<<<<< HEAD
     // **Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
 
     if(rValue === 'pierre') {
@@ -78,6 +79,21 @@ btnPierre.addEventListener('click', function(){
         // Score +0
         computerScore++;
         getComputerScore.innerHTML = computerScore;
+=======
+    var divComputerChoice = document.querySelector('.compChoice')
+    var result;
+    if(rValue === 'pierre') {
+        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
+        // Egalité
+        result = 'Egalité';
+    } else if(rValue === 'ciseaux') {
+        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
+        // Gagné
+        result = 'Egalité';
+    } else {
+
+        // Perdu
+>>>>>>> Elisa
     }
 })
 
