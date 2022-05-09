@@ -46,29 +46,26 @@ btnPierre.addEventListener('click', function(){
     divPlayerChoice.innerHTML = btnPierre.outerHTML;
 
     // Choisir de manière aléatoire le signe du computeur
-    var choices = document.querySelectorAll('.choices');
-    var myChoices = ['pierre','feuille','ciseaux'];
-    var rand = Math.random()*3 | 0;
-    var rValue = myChoices[rand];
+    // var choices = document.querySelectorAll('.choices');
+    // var myChoices = ['pierre','feuille','ciseaux'];
+    // var rand = Math.random()*3 | 0;
+    // var rValue = myChoices[rand];
 
     // Injecter l'image du signe du computeur
     // Déterminer le gagnant entre le signe player et le signe computer
     var divComputerChoice = document.querySelector('.compChoice')
-    var resultWin= document.querySelector('.win');
-    var resultLoose = document.querySelector('.loose');
-    var resultEquality = document.querySelector('.equality');
+    var result;
     if(rValue === 'pierre') {
         divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
         // Egalité
-        resultEquality.style.display="flex";
+        result = 'Egalité';
     } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
+        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
         // Gagné
-        resultWin.style.display="flex";
-    } else { (rValue === 'feuille') 
-        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+        result = 'Egalité';
+    } else {
+
         // Perdu
-        resultLoose.style.display="flex";
     }
     
 
