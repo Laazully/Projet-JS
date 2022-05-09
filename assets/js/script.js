@@ -55,7 +55,6 @@ btnPierre.addEventListener('click', function(){
 
     // Injecter l'image du signe du computeur
     // Déterminer le gagnant entre le signe player et le signe computer
-<<<<<<< HEAD
     // **Injecter en fonction du gagnant si c'est gagné, perdu ou égalité
 
     if(rValue === 'pierre') {
@@ -72,28 +71,16 @@ btnPierre.addEventListener('click', function(){
         // Score +1
         userScore ++; // Incrémenter le score du gagnant (computeur ou player)
         getUserScore.innerHTML = userScore; // Injecter le résultat
-    } else { (rValue === 'feuille') 
+        winRate(userScore, computerScore);
+    } else { //feuille
         divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
         //** */ Perdu
         // resultLoose.style.display="flex";
         // Score +0
         computerScore++;
         getComputerScore.innerHTML = computerScore;
-=======
-    var divComputerChoice = document.querySelector('.compChoice')
-    var result;
-    if(rValue === 'pierre') {
-        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
-        // Egalité
-        result = 'Egalité';
-    } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
-        // Gagné
-        result = 'Egalité';
-    } else {
+        winRate(userScore, computerScore);
 
-        // Perdu
->>>>>>> Elisa
     }
 })
 
@@ -121,6 +108,7 @@ btnFeuille.addEventListener('click', function(){
         // Score +1
         userScore ++; // Incrémenter le score du gagnant (computeur ou player)
         getUserScore.innerHTML = userScore; // Injecter le résultat
+        winRate(userScore, computerScore);
     } else if(rValue === 'ciseaux') {
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
         //** */ Perdu
@@ -128,7 +116,8 @@ btnFeuille.addEventListener('click', function(){
         // Score +0
         computerScore++;
         getComputerScore.innerHTML = computerScore;
-    } else { (rValue === 'feuille') 
+        winRate(userScore, computerScore);
+    } else { //feuille
     divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
     //** */ Egalité
         // resultEquality.style.display="flex";
@@ -160,22 +149,24 @@ btnCiseaux.addEventListener('click', function(){
         // Score +0
         computerScore++;
         getComputerScore.innerHTML = computerScore;
+        winRate(userScore, computerScore);
+
+
     } else if(rValue === 'ciseaux') {
         divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
         //** */ Egalité
             // resultEquality.style.display="flex";
             // Score +0
             
-    } else { (rValue === 'feuille') 
-    divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
-    //** */ Gagné
-    // resultWin.style.display="flex";
-    // Score +1
-    userScore ++; // Incrémenter le score du gagnant (computeur ou player)
-    getUserScore.innerHTML = userScore; // Injecter le résultat
+    } else {//feuille
+        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+        //** */ Gagné
+        // resultWin.style.display="flex";
+        // Score +1
+        userScore ++; // Incrémenter le score du gagnant (computeur ou player)
+        getUserScore.innerHTML = userScore; // Injecter le résultat
+        winRate(userScore, computerScore);
     }
-
-   
 })
 
 //fermeture de la pop-up 
@@ -183,21 +174,47 @@ btnCiseaux.addEventListener('click', function(){
 // calcule du taux de victoire :
 var pourcent = document.querySelector('.persent');
 
-function winRate (getUserScore, getUcomputerScore){
+function winRate (getUserScore, getComputerScore){
     var getpourcent = Math.round(getUserScore / (getUserScore + getComputerScore) * 100) + '%';
-    console.log(getpourcent);
+    pourcent.innerHTML = getpourcent;
+    round();
 }
 
 
-// Au bout de 3 victoires, le round est terminé, le n° round change et score remis à zéro
+
+
+
+// Au bout de 3 victoires, le round est terminé, le n° round change 
+//et score remis à zéro
 var getRoundNumber = document.querySelector('.round');
 var roundNumber = 1;
+var scoreUserInit = 0;
+var scoreCompInit = 0;
+var winRateInit = 0;
+
+
 
 function round (){
-    if (userScore =3){
+    if (userScore ==3 || computerScore==3){
+        getUserScore.innerHTML = userScore;
+        getComputerScore.innerHTML = computerScore;
+
         roundNumber++;
         getRoundNumber.innerHTML=roundNumber;
-    }
+        //Remettre à 0 les scores de Computer et User:
+        userScore = scoreUserInit;
+        computerScore= scoreCompInit;
+
+        // Afficher les scores remis à 0 :
+        getUserScore.innerHTML = userScore;
+        getComputerScore.innerHTML = computerScore;
+
+
+        // Remettre le taux de victoire à zéro:
+        getpourcent = winRateInit;
+        //afficher le nouveau taux de victoire :
+        pourcent.innerHTML=getpourcent;
+    } 
 }
 
 
