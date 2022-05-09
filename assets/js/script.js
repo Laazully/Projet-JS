@@ -62,24 +62,49 @@ btnPierre.addEventListener('click', function(){
     var resultEquality = document.querySelector('.equality');
     
     if(rValue === 'pierre') {
-        divComputerChoice.innerHTML = 'pierre';
+        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
         // Egalité
-        resultEquality.style.display="flex";
-
+        setTimeout(function() {
+            resultEquality.style.display="flex";
+            setTimeout(function(){
+                resultEquality.style.display="none";
+                divComputerChoice.innerHTML = '';
+                divPlayerChoice.innerHTML = '';
+            },1000)
+        },500);
+            // Score +0
+            
     } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = 'ciseaux';
+        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
         // Gagné
-        resultWin.style.display="flex";
-        // Injecte et incrémente score + 1 quand user gagne
-        divScoreToto.innerHTML = scoreToto += 1;
-        
+        setTimeout(function() {
+            resultWin.style.display="flex";
+            setTimeout(function(){
+                resultWin.style.display="none";
+                divComputerChoice.innerHTML = '';
+                divPlayerChoice.innerHTML = '';
+            },1000)
+        },500);
+        // Score +1
+        userScore ++; // Incrémenter le score du gagnant (computeur ou player)
+        getUserScore.innerHTML = userScore; // Injecter le résultat
+        winRate(userScore, computerScore);
 
     } else { (rValue === 'feuille') 
-        divComputerChoice.innerHTML ='feuille';
+    divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
         // Perdu
-        resultLoose.style.display="flex";
-        // Injecte  et incrémente score + 1 quand computer gagne
-        divScoreComp.innerHTML = scoreComp += 1;
+        setTimeout(function() {
+            resultLoose.style.display="flex";
+            setTimeout(function(){
+                resultLoose.style.display="none";
+                divComputerChoice.innerHTML = '';
+                divPlayerChoice.innerHTML = '';
+            },1000)
+        },500);
+        // Score +0
+        computerScore++;
+        getComputerScore.innerHTML = computerScore;
+        winRate(userScore, computerScore);
     }    
 
 })       
