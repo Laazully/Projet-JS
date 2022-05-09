@@ -254,12 +254,6 @@ function round (){
 
 
 // Au bout de 5 round, la partie est terminé et renvoie vers resultat partie
-<<<<<<< HEAD
-//Ca bug
-=======
-//Ca bug !
-// OUI
->>>>>>> Marie
 // function resultGame (){
 //     if (round ==5){
 //         divBattle.style.display = 'none';
