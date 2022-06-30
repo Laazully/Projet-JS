@@ -62,7 +62,7 @@ btnPierre.addEventListener('click', function(){
 
     if(rValue === 'pierre') {
         // Afficher et enlever les mains
-        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
+        divComputerChoice.innerHTML = '<img class="ordiPierre" src="assets/img/pierre.png" alt="pierre">';
         //** */ Egalité
         setTimeout(function() {
             resultEquality.style.display="flex";
@@ -75,7 +75,7 @@ btnPierre.addEventListener('click', function(){
         // Score +0
         
     } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
+        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="assets/img/ciseaux.png" alt="ciseaux">';
         //** */ Gagné
         // resultWin.style.display="flex";
         setTimeout(function() {
@@ -91,7 +91,7 @@ btnPierre.addEventListener('click', function(){
         getUserScore.innerHTML = userScore; // Injecter le résultat
         winRate(userScore, computerScore);
     } else { //feuille
-        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="assets/img/feuille.png" alt="feuille"></img>';
         //** */ Perdu
         // resultLoose.style.display="flex";
         setTimeout(function() {
@@ -127,7 +127,7 @@ btnFeuille.addEventListener('click', function(){
 
 
     if(rValue === 'pierre') {
-        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
+        divComputerChoice.innerHTML = '<img class="ordiPierre" src="assets/img/pierre.png" alt="pierre">';
         //** */ Gagné
         setTimeout(function() {
             resultWin.style.display="flex";
@@ -142,7 +142,7 @@ btnFeuille.addEventListener('click', function(){
         getUserScore.innerHTML = userScore; // Injecter le résultat
         winRate(userScore, computerScore);
     } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
+        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="assets/img/ciseaux.png" alt="ciseaux">';
         //** */ Perdu
         setTimeout(function() {
             resultLoose.style.display="flex";
@@ -157,7 +157,7 @@ btnFeuille.addEventListener('click', function(){
         getComputerScore.innerHTML = computerScore;
         winRate(userScore, computerScore);
     } else { //feuille
-    divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+    divComputerChoice.innerHTML ='<img class="ordiFeuille" src="assets/img/feuille.png" alt="feuille"></img>';
     //** */ Egalité
     setTimeout(function() {
         resultEquality.style.display="flex";
@@ -188,7 +188,7 @@ btnCiseaux.addEventListener('click', function(){
 
 
     if(rValue === 'pierre') {
-        divComputerChoice.innerHTML = '<img class="ordiPierre" src="/assets/img/pierre.png" alt="pierre">';
+        divComputerChoice.innerHTML = '<img class="ordiPierre" src="assets/img/pierre.png" alt="pierre">';
         //** */ Perdu
         setTimeout(function() {
             resultLoose.style.display="flex";
@@ -205,7 +205,7 @@ btnCiseaux.addEventListener('click', function(){
 
 
     } else if(rValue === 'ciseaux') {
-        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="/assets/img/ciseaux.png" alt="ciseaux">';
+        divComputerChoice.innerHTML = '<img class="ordiCiseaux" src="assets/img/ciseaux.png" alt="ciseaux">';
         //** */ Egalité
         setTimeout(function() {
             resultEquality.style.display="flex";
@@ -218,7 +218,7 @@ btnCiseaux.addEventListener('click', function(){
             // Score +0
             
     } else {//feuille
-        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="/assets/img/feuille.png" alt="feuille"></img>';
+        divComputerChoice.innerHTML ='<img class="ordiFeuille" src="assets/img/feuille.png" alt="feuille"></img>';
         //** */ Gagné
         setTimeout(function() {
             resultWin.style.display="flex";
